@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el)
     })
 
-    // Supabase Configuration
+    // Initialize Supabase
     const SUPABASE_URL = 'https://yhzkgfgwblhwuatkpmbg.supabase.co' // Replace with your Supabase project URL
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InloemtnZmd3Ymxod3VhdGtwbWJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNDc4MTksImV4cCI6MjA2MzgyMzgxOX0.SG_aqjc9bvXaiUTvObK8pmNw0ZlSUpFAksP4ejZvciI' // Replace with your Supabase anon key
-    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+    const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
     // Form Submission Handler
     async function handleSubmit(event, formId) {
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         button.textContent = 'Joining...'
         
         try {
-            const { data, error } = await supabase
+            const { data, error } = await supabaseClient
                 .from('waitlist')
                 .insert([{ email_address: input.value }])
             
