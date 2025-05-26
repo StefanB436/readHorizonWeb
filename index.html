@@ -1,116 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ReadHorizon - Track Your Reading Journey</title>
-  <link rel="icon" href="assets/favicon.png" type="image/png" />
-  <meta name="description" content="Track your reading journey with ReadHorizon. Log books, set goals, and discover what to read next.">
-  <meta name="keywords" content="book tracker, reading log, reading goals, ReadHorizon">
-  <meta name="author" content="ReadHorizon Team">
-
-  <!-- Social Media Previews -->
-  <meta property="og:title" content="ReadHorizon - Track Your Reading Journey" />
-  <meta property="og:description" content="Your personal companion to track and explore your reading." />
-  <meta property="og:image" content="https://readhorizon.app/assets/social-preview.png" />
-  <meta property="og:url" content="https://readhorizon.app" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome (for icons) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav>
-    <div class="container">
-      <a href="#" class="logo">ReadHorizon</a>
-      <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#waitlist">Waitlist</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadHorizon</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav">
+        <div class="logo">ReadHorizon</div>
+        <a href="#waitlist" class="waitlist-button">Join Waitlist</a>
       </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="container">
-      <h1>Track Your <span>Reading Journey</span></h1>
-      <p>Log books, discover new reads, and achieve your reading goals with ReadHorizon.</p>
-      <div class="cta-buttons">
-        <a href="#waitlist" class="btn-primary">Join Waitlist</a>
-        <a href="#features" class="btn-secondary">Learn More <i class="fas fa-arrow-down"></i></a>
+      <div class="hero">
+        <h1 class="hero-title">Reimagine Reading.</h1>
+        <p class="hero-subtitle">Your journey through books — tracked, visualized, elevated.</p>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Features Section -->
-  <section class="features" id="features">
-    <div class="container">
-      <h2>Why Choose ReadHorizon?</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <i class="fas fa-book-open"></i>
-          <h3>Track Your Progress</h3>
-          <p>Log books, rate them, and add private notes—all in one place.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-binoculars"></i>
-          <h3>Discover New Reads</h3>
-          <p>AI-powered recommendations based on your reading taste.</p>
-        </div>
-        <div class="feature-card">
-          <i class="fas fa-trophy"></i>
-          <h3>Set Goals</h3>
-          <p>Yearly challenges and streaks to keep you motivated.</p>
-        </div>
+    <section class="feature-section">
+      <div class="feature" id="feature1">
+        <h2>Offline-First Tracking</h2>
+        <p>Track your books even without internet. Seamless syncing with Supabase when online.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- Waitlist Section -->
-  <section class="waitlist" id="waitlist">
-    <div class="container">
-      <h2>Coming Soon to <span>iOS & Android</span></h2>
-      <p>Be the first to know when we launch! Join our waitlist below.</p>
-      <form id="waitlist-form">
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit" class="btn-primary">Notify Me!</button>
-      </form>
-      <p class="small-text">We respect your privacy. No spam, ever.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <a href="#" class="logo">ReadHorizon</a>
-          <p>Your reading companion.</p>
-        </div>
-        <div class="footer-links">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="mailto:hello@readhorizon.app"><i class="fas fa-envelope"></i></a>
-        </div>
+      <div class="feature" id="feature2">
+        <h2>Eco-Conscious Design</h2>
+        <p>Built to be lightweight and carbon-aware. Reading, the green way.</p>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 ReadHorizon. All rights reserved.</p>
-        <a href="#">Privacy Policy</a>
+
+      <div class="feature" id="feature3">
+        <h2>Visual Progress</h2>
+        <p>See your progress with smooth charts and dynamic stats. Watch your horizon grow.</p>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script src="scripts.js"></script> 
+    <section class="cta" id="waitlist">
+      <h2>Be the First to Try ReadHorizon</h2>
+      <p>Sign up now to get early access and shape the future of mindful reading.</p>
+      <a href="https://your-waitlist-link.com" class="waitlist-button large">Join the Waitlist</a>
+    </section>
 
-  
-</body>
+    <footer class="footer">
+      <p>© 2025 ReadHorizon. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
 </html>

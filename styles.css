@@ -1,238 +1,109 @@
-/* Modern Steel Blue Theme */
-:root {
-    --primary: #4682B4;    /* Steel Blue */
-    --light: #FFFFFF;      /* White */
-    --gray-light: #F3F4F6; /* Light Gray */
-    --gray-dark: #6B7280;  /* Dark Gray */
-  }
-  
-  /* Base Styles */
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: var(--gray-dark);
-    background: var(--light);
-    line-height: 1.6;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Navigation - Simplified */
-  nav {
-    padding: 1rem 0;
-  }
-  
-  nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary);
-    text-decoration: none;
-  }
-  
-  .nav-links {
-    display: none; /* Hide the navigation links */
-  }
-  
-  /* Hero Section */
-  .hero {
-    text-align: center;
-    padding: 6rem 0;
-    background: linear-gradient(135deg, var(--primary) 0%, #5A8FBB 100%);
-    color: white;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero h1 span {
-    color: white;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-  }
-  
-  /* Buttons */
-  .btn-primary, .btn-secondary {
-    display: inline-block;
-    padding: 0.75rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .btn-primary {
-    background: var(--light);
-    color: var(--primary);
-    margin-right: 1rem;
-  }
-  
-  .btn-primary:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-2px);
-  }
-  
-  .btn-secondary {
-    color: var(--light);
-    border: 2px solid var(--light);
-  }
-  
-  .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  /* Features Section */
-  .features {
-    padding: 5rem 0;
-  }
-  
-  .features h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--primary);
-  }
-  
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-  
-  .feature-card {
-    background: var(--light);
-    border: 1px solid var(--gray-light);
-    border-radius: 12px;
-    padding: 2rem;
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(70, 130, 180, 0.1);
-  }
-  
-  .feature-card i {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-  }
-  
-  .feature-card h3 {
-    color: var(--primary);
-    margin-bottom: 1rem;
-  }
-  
-  /* Waitlist Section */
-  .waitlist {
-    text-align: center;
-    padding: 5rem 0;
-    background: var(--gray-light);
-  }
-  
-  .waitlist h2 span {
-    color: var(--primary);
-  }
-  
-  .waitlist form {
-    max-width: 500px;
-    margin: 2rem auto;
-    display: flex;
-  }
-  
-  .waitlist input {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid #D1D5DB;
-    border-radius: 8px 0 0 8px;
-    font-size: 1rem;
-  }
-  
-  .waitlist button {
-    border-radius: 0 8px 8px 0;
-    border: none;
-  }
-  
-  .small-text {
-    font-size: 0.9rem;
-    color: var(--gray-dark);
-  }
-  
-  /* Footer */
-  footer {
-    background: var(--gray-dark);
-    color: var(--light);
-    padding: 3rem 0 1rem;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .footer-links a {
-    color: var(--light);
-    margin-left: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-  }
-  
-  .footer-bottom a {
-    color: var(--light);
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .hero {
-      padding: 4rem 0;
-    }
-    
-    .cta-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    
-    .btn-primary, .btn-secondary {
-      display: block;
-      margin: 0;
-    }
-    
-    .waitlist form {
-      flex-direction: column;
-    }
-    
-    .waitlist input, .waitlist button {
-      border-radius: 8px;
-      width: 100%;
-    }
-    
-    .waitlist button {
-      margin-top: 0.5rem;
-    }
-  }
+/* Reset and Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+  color: #111;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #f8f8f8 0%, #fff 100%);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.waitlist-button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.waitlist-button:hover {
+  background-color: #333;
+}
+.hero {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #666;
+}
+
+/* Features */
+.feature-section {
+  padding: 4rem 2rem;
+  background: #f5f5f7;
+}
+.feature {
+  max-width: 800px;
+  margin: 4rem auto;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+}
+.feature h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.feature p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #000;
+  color: white;
+}
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.waitlist-button.large {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  background: #f8f8f8;
+  color: #666;
+}
