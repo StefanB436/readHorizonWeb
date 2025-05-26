@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const { error } = await supabaseClient
       .from('waitlist') // Assuming your table is named "waitlist"
-      .insert([{ email_adress: email }]);
+      .insert([{ email_address: email }]);
 
     if (error) {
       console.error('Supabase insert error:', error);
