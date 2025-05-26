@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     // Supabase Configuration
-    const SUPABASE_URL = 'https://your-project.supabase.co' // Replace with your Supabase project URL
-    const SUPABASE_ANON_KEY = 'your-anon-key' // Replace with your Supabase anon key
+    const SUPABASE_URL = 'https://yhzkgfgwblhwuatkpmbg.supabase.co' // Replace with your Supabase project URL
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InloemtnZmd3Ymxod3VhdGtwbWJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNDc4MTksImV4cCI6MjA2MzgyMzgxOX0.SG_aqjc9bvXaiUTvObK8pmNw0ZlSUpFAksP4ejZvciI' // Replace with your Supabase anon key
     const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 
     // Form Submission Handler
