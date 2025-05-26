@@ -6,6 +6,9 @@ const { createClient } = supabase;
 const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // Handle waitlist form submit
+
+console.log('Script loaded ✅');
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('waitlist-form');
   const input = form.querySelector('input[type="email"]');
