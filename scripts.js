@@ -13,16 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = input.value.trim();
-
-    if (!email) {
-      alert('Please enter a valid email address.');
-      return;
-    }
-
+    console.log('Submitting email:', email);
+  
     const { error } = await supabaseClient
-      .from('waitlist') // Assuming your table is named "waitlist"
+      .from('waitlist')
       .insert([{ email_address: email }]);
-
+  
     if (error) {
       console.error('Supabase insert error:', error);
       alert('Something went wrong. Please try again later.');
