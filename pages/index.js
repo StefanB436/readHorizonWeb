@@ -17,38 +17,16 @@ export default function Home() {
   useEffect(() => {
     // Register GSAP animations
     const ctx = gsap.context(() => {
-      // Hero animations
-      gsap.from('.hero-content', {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        ease: 'power3.out'
-      })
-
-      // Feature animations
-      gsap.utils.toArray('.feature').forEach((feature, i) => {
-        gsap.from(feature, {
-          scrollTrigger: {
-            trigger: feature,
-            start: 'top 80%',
-            toggleActions: 'play none none none'
-          },
-          opacity: 0,
-          y: 50,
-          duration: 0.8,
-          delay: i * 0.1,
-          ease: 'power2.out'
-        })
-      })
-
-      // Subtle parallax effects
+      // Only handle parallax effects here
       gsap.utils.toArray('.parallax').forEach((layer) => {
         const speed = layer.dataset.speed || 1
         gsap.to(layer, {
           y: 100 * speed,
           scrollTrigger: {
             trigger: layer,
-            scrub: true
+            scrub: true,
+            start: "top bottom",
+            end: "bottom top"
           }
         })
       })
@@ -80,12 +58,6 @@ export default function Home() {
             description="Track your books even without internet. Seamless syncing when you're back online."
             image="/images/feature2.png"
             align="right"
-          />
-          <FeatureSection 
-            title="Finish Books, Not Just Start Them"
-            description="Get personalized reminders and motivation to help you complete what you start."
-            image="/images/feature3.png"
-            align="left"
           />
         </div>
         <WaitlistForm />
