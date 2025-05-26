@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadHorizon - Track Your Reading Journey</title>
+    <meta name="description" content="ReadHorizon helps you track your books and connect with them more deeply through smart features like bookshelf scanning and voice reflections.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="assets/logo.svg" alt="ReadHorizon Logo" width="40" height="40">
+                <span>ReadHorizon</span>
+            </div>
+            <a href="#waitlist" class="button-secondary">Join Waitlist</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="reveal-on-scroll">Track Your Reading Journey</h1>
+                <p class="hero-subtitle reveal-on-scroll">Connect more deeply with your books through smart tracking, effortless scanning, and meaningful reflections.</p>
+                
+                <form id="waitlist-form-top" class="waitlist-form reveal-on-scroll">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Join Waitlist</button>
+                    <div class="form-message"></div>
+                </form>
+            </div>
+            <div class="gradient-bg"></div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="feature-card reveal-on-scroll">
+                    <div class="feature-icon smart-tracking"></div>
+                    <h3>Smart Book Tracking</h3>
+                    <p>Automatically log your books and pages with intelligent progress tracking that adapts to your reading style.</p>
+                </div>
+
+                <div class="feature-card reveal-on-scroll">
+                    <div class="feature-icon quick-add"></div>
+                    <h3>Multiple Ways to Add Books</h3>
+                    <p>Search our extensive database, scan book covers, or add details manually. Whatever works best for you.</p>
+                </div>
+
+                <div class="feature-card reveal-on-scroll">
+                    <div class="feature-icon shelf-scan"></div>
+                    <h3>Bookshelf Scanner</h3>
+                    <p>Record a quick video of your bookshelf, and watch as we automatically detect and catalog your entire collection.</p>
+                </div>
+
+                <div class="feature-card reveal-on-scroll">
+                    <div class="feature-icon reflections"></div>
+                    <h3>Notes & Voice Reflections</h3>
+                    <p>Capture your thoughts through text notes or voice recordings that automatically convert to searchable text.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="waitlist">
+            <div class="container">
+                <h2 class="reveal-on-scroll">Start Your Reading Journey</h2>
+                <p class="reveal-on-scroll">Join the waitlist to be one of the first to experience a smarter way to track and connect with your books.</p>
+                
+                <form id="waitlist-form-bottom" class="waitlist-form reveal-on-scroll">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Join Waitlist</button>
+                    <div class="form-message"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="ReadHorizon Logo" width="32" height="32">
+                <span>ReadHorizon</span>
+            </div>
+            <p>&copy; 2025 ReadHorizon. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
